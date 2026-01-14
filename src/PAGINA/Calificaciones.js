@@ -37,6 +37,7 @@ function SortableHeader({ id, children, disabled }) {
       </div>
     </th>
   );
+
 }
 
 // --- CAMBIO: URL de la API desde variables de entorno para Vercel ---
