@@ -40,7 +40,7 @@ function SortableHeader({ id, children, disabled }) {
 }
 
 // --- CAMBIO: URL de la API desde variables de entorno para Vercel ---
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+const API_URL = process.env.REACT_APP_API_URL || 'https://secno.onrender.com';
 
 // --- Componente de Notificación (Utilidad) ---
 function Notificacion({ mensaje, tipo, onClose }) {

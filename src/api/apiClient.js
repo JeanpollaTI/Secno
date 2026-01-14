@@ -3,7 +3,7 @@ import axios from 'axios';
 // Define la URL base del backend. 
 // Utiliza la variable de entorno REACT_APP_API_URL si está definida (ej. en .env)
 // Si no está definida, usa 'http://localhost:5000' como fallback.
-const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
+const API_BASE_URL = process.env.REACT_APP_API_URL || "https://secno.onrender.com";
 
 /**
  * Instancia de Axios configurada para manejar todas las peticiones a la API.

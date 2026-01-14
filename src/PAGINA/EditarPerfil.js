@@ -5,13 +5,13 @@ import { AuthContext } from "./AuthContext"; // Importar el contexto
 import "./EditarPerfil.css";
 
 // --- URL de la API desde variables de entorno ---
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+const API_URL = process.env.REACT_APP_API_URL || 'https://secno.onrender.com';
 
 function EditarPerfil({ user }) {
   const navigate = useNavigate();
-  
+
   // Obtener la función login (setter para el usuario) y la función de URL del contexto
-  const { login, getProfileImageUrl } = useContext(AuthContext); 
+  const { login, getProfileImageUrl } = useContext(AuthContext);
 
   const [formData, setFormData] = useState({
     nombre: "",
@@ -38,7 +38,7 @@ function EditarPerfil({ user }) {
       });
 
       // Usa la función centralizada para la previsualización
-      setFotoPreview(getProfileImageUrl(user.foto)); 
+      setFotoPreview(getProfileImageUrl(user.foto));
     }
   }, [user, getProfileImageUrl]);
 
@@ -82,9 +82,9 @@ function EditarPerfil({ user }) {
       });
 
       const updatedUser = res.data.user || res.data;
-      
+
       // Actualizar el estado global del usuario
-      login(updatedUser, token); 
+      login(updatedUser, token);
 
       setSuccess("Perfil actualizado correctamente.");
 
@@ -127,13 +127,13 @@ function EditarPerfil({ user }) {
           <input type="text" name="nombre" value={formData.nombre} onChange={handleChange} placeholder="Nombre" />
           <input type="number" name="edad" value={formData.edad} onChange={handleChange} placeholder="Edad" />
           <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email" />
-          
+
           <select name="sexo" value={formData.sexo} onChange={handleChange}>
             <option value="Masculino">Masculino</option>
             <option value="Femenino">Femenino</option>
             <option value="Otro">Otro</option>
           </select>
-          
+
           <input type="text" name="celular" value={formData.celular} onChange={handleChange} placeholder="Celular" />
 
           {/* Botones de acción */}

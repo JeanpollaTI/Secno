@@ -5,13 +5,13 @@ import "./Login.css";
 
 // La URL de la API se obtiene de las variables de entorno para flexibilidad
 // en desarrollo y producción (Vercel).
-const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
+const API_URL = process.env.REACT_APP_API_URL || "https://secno.onrender.com";
 
 // Eliminamos 'onLogin' de las props y usamos el Contexto
 function Login() {
     // Obtenemos la función 'login' del Contexto
-    const { login } = useContext(AuthContext); 
-    
+    const { login } = useContext(AuthContext);
+
     const [identifier, setIdentifier] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
@@ -58,8 +58,8 @@ function Login() {
             // *** CAMBIO CLAVE: Usar la función 'login' del Contexto para establecer el estado global ***
             // Esta función guardará el token y el usuario en localStorage y actualizará el estado de la aplicación.
             login(data.user, data.token);
-            
-            
+
+
             // Redirigir al usuario según su rol
             switch (data.user.role) {
                 case "admin":
