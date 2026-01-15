@@ -21,6 +21,12 @@ export const sendEmail = async (to, subject, html, attachments = []) => {
         user: process.env.GMAIL_USER,
         pass: process.env.GMAIL_PASS,
       },
+      // Optimizaciones para evitar que se cuelgue (timeouts y debug)
+      connectionTimeout: 10000, // 10 segundos máximo para conectar
+      greetingTimeout: 10000,   // 10 segundos máximo para el saludo SMTP
+      socketTimeout: 10000,     // 10 segundos máximo de inactividad
+      logger: true, // Habilitar logs detallados en la consola
+      debug: true,  // Incluir detalles de depuración
     });
 
 
