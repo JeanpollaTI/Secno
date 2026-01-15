@@ -12,7 +12,7 @@ import logoDerecho from "./Logoescuela.png";
 
 // --- CONSTANTES Y CONFIGURACIÓN ---
 // Uso de process.env.REACT_APP_API_URL para compatibilidad con Vercel/Render
-const API_URL = process.env.REACT_APP_API_URL || "https://secno.onrender.com";
+const API_URL = process.env.REACT_APP_API_URL || "https://secno-pe1g.onrender.com";
 
 const dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"];
 const horas = [1, 2, 3, 4, 5, 6, 7];

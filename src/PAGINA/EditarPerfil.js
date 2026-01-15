@@ -5,7 +5,7 @@ import { AuthContext } from "./AuthContext"; // Importar el contexto
 import "./EditarPerfil.css";
 
 // --- URL de la API desde variables de entorno ---
-const API_URL = process.env.REACT_APP_API_URL || 'https://secno.onrender.com';
+const API_URL = process.env.REACT_APP_API_URL || 'https://secno-pe1g.onrender.com';
 
 function EditarPerfil({ user }) {
   const navigate = useNavigate();

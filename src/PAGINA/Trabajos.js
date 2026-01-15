@@ -6,7 +6,7 @@ import logoImage from './Logoescuela.png';
 import ConfirmacionModal from './ConfirmacionModal';
 
 // La URL de la API se obtiene de las variables de entorno para Vercel/Render
-const API_URL = process.env.REACT_APP_API_URL || 'https://secno.onrender.com';
+const API_URL = process.env.REACT_APP_API_URL || 'https://secno-pe1g.onrender.com';
 
 // ======================================
 // --- 1. Componente de Notificación (Integrado) ---

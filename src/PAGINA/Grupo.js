@@ -11,7 +11,7 @@ import logoImage from './Logoescuela.png'; // Asegúrate que esta ruta sea corre
 
 // --- URL de la API desde variables de entorno para Vercel ---
 // CORRECCIÓN: Eliminado '/api' para coincidir con Home.js y la estructura del backend
-const API_URL = process.env.REACT_APP_API_URL || 'https://secno.onrender.com';
+const API_URL = process.env.REACT_APP_API_URL || 'https://secno-pe1g.onrender.com';
 
 // --- CONSTANTES DE CONFIGURACIÓN ---
 const NUM_BIMESTRES = 3;

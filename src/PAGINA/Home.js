@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import ConfirmacionModal from "./ConfirmacionModal";
 
 // La URL de tu backend ahora se leerá desde las variables de entorno
-const API_URL = process.env.REACT_APP_API_URL || "https://secno.onrender.com";
+const API_URL = process.env.REACT_APP_API_URL || "https://secno-pe1g.onrender.com";
 
 
 function Home({ user }) {

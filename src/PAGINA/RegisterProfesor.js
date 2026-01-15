@@ -5,7 +5,7 @@ import { FaCamera } from "react-icons/fa";
 import "./RegisterProfesor.css";
 
 // La URL de la API ahora apunta a tu servidor en Render (Vercel la leerá desde .env)
-const API_URL = process.env.REACT_APP_API_URL || "https://secno.onrender.com";
+const API_URL = process.env.REACT_APP_API_URL || "https://secno-pe1g.onrender.com";
 
 export default function RegisterProfesor() {
         const navigate = useNavigate();
