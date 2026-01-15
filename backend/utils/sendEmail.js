@@ -21,6 +21,7 @@ export const sendEmail = async (to, subject, html, attachments = []) => {
       },
     });
 
+
     // Mapear adjuntos de formato SendGrid a formato Nodemailer
     // SendGrid usa 'content' (base64) y 'type'. Nodemailer prefiere 'encoding: base64' si content es string.
     const nodemailerAttachments = attachments.map((att) => ({
