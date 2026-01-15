@@ -15,8 +15,8 @@ export const sendEmail = async (to, subject, html, attachments = []) => {
     // Configuración del transporter para Gmail (SSL explícito para evitar timeouts)
     const transporter = nodemailer.createTransport({
       host: 'smtp.gmail.com',
-      port: 465,
-      secure: true, // true para 465, false para otros puertos
+      port: 587,
+      secure: false, // false para 587 (usa STARTTLS)
       auth: {
         user: process.env.GMAIL_USER,
         pass: process.env.GMAIL_PASS,
