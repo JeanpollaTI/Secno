@@ -12,12 +12,14 @@ dotenv.config();
  */
 export const sendEmail = async (to, subject, html, attachments = []) => {
   try {
-    // Configuración del transporter para Gmail
+    // Configuración del transporter para Gmail (SSL explícito para evitar timeouts)
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true, // true para 465, false para otros puertos
       auth: {
-        user: process.env.GMAIL_USER, // Tu correo de Gmail
-        pass: process.env.GMAIL_PASS, // Tu Contraseña de Aplicación (App Password)
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_PASS,
       },
     });
 
